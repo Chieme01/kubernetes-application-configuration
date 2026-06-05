@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-deployment
+  labels: 
+    app: python
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python
+  template:
+    metadata:
+      labels:
+        app: python
+    spec:
+      containers:
+      - name: python-container
+        image: devopscontainerregistry.azurecr.io/app:eca7206e0edce817013d55324dbe98bbd52d6bd9
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: acr-secret
