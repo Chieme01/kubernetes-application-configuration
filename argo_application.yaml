@@ -17,11 +17,9 @@ spec:
     syncOptions:
     # Create namespace for deploying applications if namespace doesn't exist.
     - CreateNamespace=true
-  
-  # Automatically fetch changes to the repo
-  automated:
-  # Undo and override manual changes to the cluster
-    selfHeal: true
-  # Also delete cluster components that were deleted repo's code
-    prune: true
-
+    # Automatically fetch changes to the repo
+    automated:
+      # Undo and override manual changes to the cluster
+      selfHeal: true
+      # Also delete cluster components that were deleted repo's code
+      prune: true
