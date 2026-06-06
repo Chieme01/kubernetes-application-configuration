@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: python-container
-        image: devopscontainerregistry.azurecr.io/app:99fd9411a34b22ec6a6b164385d0071a84660f5a
+        image: devopscontainerregistry.azurecr.io/app:12d680be2ac6a6aad3711a7887d91af1e838bc40
         ports:
         - containerPort: 80
       imagePullSecrets:
